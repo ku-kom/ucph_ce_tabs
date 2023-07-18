@@ -4,8 +4,8 @@
  * Extension Manager/Repository config file for ext "ucph_ce_tabs".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'UCPH TYPO3 content element "Regular text"',
-    'description' => 'UCPH TYPO3 content element "Regular text"',
+    'title' => 'UCPH TYPO3 content element "Tabs"',
+    'description' => 'UCPH TYPO3 content element "Tabs"',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
