@@ -1,12 +1,57 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Main">
-    <f:if condition="{data.header}">
-        <h2>
-            <f:format.htmlspecialchars doubleEncode="false">{data.header}</f:format.htmlspecialchars>
-        </h2>
+    <f:if condition="{tabs}">
+        <f:variable name="activeTab">{tabs.0.data.uid}</f:variable>
+        <f:if condition="{flexFormData.default_tab}">
+            <f:for each="{tabs}" as="record" iteration="iteration">
+                <f:if condition="{flexFormData.default_tab} == {record.data.uid} || {flexFormData.default_tab} == {record.data._LOCALIZED_UID}">
+                    <f:variable name="activeTab">{record.data.uid}</f:variable>
+                </f:if>
+            </f:for>
+        </f:if>
+        <nav aria-label="{flexFormData.tablist_name}">
+            <div class="nav nav-tabs" id="tab-{data.uid}" role="tablist">
+                <f:for each="{tabs}" as="record" iteration="iteration">
+                    <button class="nav-link{f:if(condition: '{activeTab} == {record.data.uid}',then: ' active')}" id="tab-{data.uid}-{record.data.uid}" data-bs-toggle="tab" data-bs-target="#tabcontent-{data.uid}-{record.data.uid}" type="button" role="tab" aria-controls="tabcontent-{data.uid}-{record.data.uid}" aria-selected="{f:if(condition: '{activeTab} == {record.data.uid}',then: 'true', else: 'false')}">
+                        <span>{record.data.header}</span>
+                    </button>
+                </f:for>
+            </div>
+        </nav>
+        <div class="tab-content" id="tabcontent-{data.uid}">
+            <f:for each="{tabs}" as="record" iteration="iteration">
+                <div class="tab-pane fade{f:if(condition: '{activeTab} == {record.data.uid}',then: ' show active')}" id="tabcontent-{data.uid}-{record.data.uid}" role="tabpanel" aria-labelledby="tab-{data.uid}-{record.data.uid}">
+                    <div class="tab-pane-content ">
+                        <f:if condition="{record.images}">
+                            <f:then>
+                                <div class="tab-pane-content-item tab-pane-content-media">
+                                    <f:for each="{record.images}" as="image">
+                                        <figure class="image">
+                                            <picture>
+                                                <source srcset="{f:uri.image(image:image, width:'1400', cropVariant: 'xlarge')}" media="(min-width: 1400px)" />
+                                                <source srcset="{f:uri.image(image:image, width:'1200', cropVariant: 'large')}" media="(min-width: 1200px)" />
+                                                <source srcset="{f:uri.image(image:image, width:'992', cropVariant: 'medium')}" media="(min-width: 992px)" />
+                                                <source srcset="{f:uri.image(image:image, width:'768', cropVariant: 'small')}" media="(min-width: 768px)" />
+                                                <source srcset="{f:uri.image(image:image, width:'620', cropVariant: 'xsmall')}" media="(min-width: 0px)" />
+                                                <img class="img-responsive" src="{f:uri.image(image: image, treatIdAsReference: true, maxWidth: settings.maxImgWidth, cropVariant: 'default')}" alt="{image.alternative}" />
+                                            </picture>
+                                            <f:if condition="{image.description}">
+                                                <figcaption>{image.description}</figcaption>
+                                            </f:if>
+                                        </figure>
+                                    </f:for>
+                                </div>
+                            </f:then>
+                        </f:if>
+                        <div class="tab-pane-content-item tab-pane-content-text">
+                            <f:format.html>{record.data.bodytext}</f:format.html>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
     </f:if>
-    <f:format.html>{data.bodytext}</f:format.html>
 </f:section>
 
 </html>

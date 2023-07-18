@@ -34,7 +34,7 @@ return [
             'ignorePageTypeRestriction' => true
         ],
         'typeicon_classes' => [
-            'default' => 'ucph_ce_tabs_icon'
+            'default' => 'ucph-ce-tabs-icon'
         ],
     ],
     'types' => [
@@ -64,13 +64,6 @@ return [
         'general' => [
             'showitem' => '
                 tt_content
-            '
-        ],
-        'mediaposition' => [
-            'showitem' => '
-                mediaorient,
-                imagecols,
-                image_zoom,
             '
         ],
         'visibility' => [

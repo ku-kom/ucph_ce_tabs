@@ -10,7 +10,6 @@ declare(strict_types=1);
 defined('TYPO3') or die();
 
 call_user_func(function ($extKey ='ucph_ce_tabs', $contentType ='ucph_ce_tabs') {
-    
     // Add Content Element
     if (!is_array($GLOBALS['TCA']['tt_content']['types'][$contentType] ?? false)) {
         $GLOBALS['TCA']['tt_content']['types'][$contentType] = [];
@@ -23,14 +22,14 @@ call_user_func(function ($extKey ='ucph_ce_tabs', $contentType ='ucph_ce_tabs') 
         [
             'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_title',
             $contentType,
-            'ucph_ce_tabs_icon'
+            'ucph-ce-tabs-icon'
         ],
         'ucph_ce_modals',
         'before'
     );
     
     // Assign Icon
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes'][$contentType] = 'ucph_ce_tabs_icon';
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes'][$contentType] = 'ucph-ce-tabs-icon';
     
     // Configure element type
     $GLOBALS['TCA']['tt_content']['types'][$contentType] = array_replace_recursive(
@@ -92,6 +91,6 @@ call_user_func(function ($extKey ='ucph_ce_tabs', $contentType ='ucph_ce_tabs') 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:'.$extKey.'/Configuration/FlexForms/Tab.xml',
-        'tab'
+        $contentType
     );
 });

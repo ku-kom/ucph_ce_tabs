@@ -13,8 +13,7 @@
                 <el>
                     <default_tab>
                         <TCEforms>
-                            <label>LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_default
-                            </label>
+                            <label>LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_default</label>
                             <config>
                                 <type>select</type>
                                 <renderType>selectSingle</renderType>
@@ -29,6 +28,14 @@
                             </config>
                         </TCEforms>
                     </default_tab>
+                    <tablist_name>
+                        <TCEforms>
+                            <label>LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang.xlf:ucph_ce_tabs_nav_label</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </tablist_name>
                 </el>
             </ROOT>
         </sDEF>

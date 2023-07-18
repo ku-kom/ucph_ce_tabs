@@ -3,6 +3,12 @@ tt_content.ucph_ce_tabs >
 tt_content.ucph_ce_tabs =< lib.contentElement
 tt_content.ucph_ce_tabs {
     templateName = Tab
+    templateRootPaths {
+        104 = EXT:ucph_ce_tabs/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        104 = EXT:ucph_ce_tabs/Resources/Private/Partials/
+    }
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
@@ -15,6 +21,8 @@ tt_content.ucph_ce_tabs {
                 wrap = tt_content=|
             }
             orderBy = sorting
+            as = tabs
+            
             dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
                 10 {
