@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf" date="2023-06-21T10:27:00Z" product-name="ucph_ce_tabs">
+        <header>
+            <authorName>Nanna Ellegaard</authorName>
+            <authorEmail>nel@adm.ku.dk</authorEmail>
+        </header>
+        <body>
+        <trans-unit id="ucph_ce_tabs_title">
+            <source>Tabs</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_desc">
+            <source>Insert several tab elements with header and text.</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_options">
+            <source>Tab settings</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_advanced">
+            <source>Advanced settings</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item">
+            <source>Tab Item</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item_default">
+            <source>Default tab</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item_tt_content">
+            <source>Tab</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item_header">
+            <source>Header</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item_bodytext">
+            <source>Text</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item_image">
+            <source>Image</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_item_image_alt">
+            <source>Optional: Keep empty for decorative images</source>
+        </trans-unit>
+        </body>
+    </file>
+</xliff>

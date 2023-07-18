@@ -1,0 +1,29 @@
+tt_content.ucph_ce_tabs >
+# CTYPE: BOOTSTRAP TAB
+tt_content.ucph_ce_tabs =< lib.contentElement
+tt_content.ucph_ce_tabs {
+    templateName = Tab
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_ucph_ce_tab_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                    folders.field = file_folder
+                    sorting.field = filelink_sorting
+                    as = images
+                }
+            }
+        }
+    }
+}
