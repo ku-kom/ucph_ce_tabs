@@ -19,7 +19,10 @@
             <source>Advanced settings</source>
         </trans-unit>
         <trans-unit id="ucph_ce_tabs_item">
-            <source>Tab Item</source>
+            <source>Tab Items</source>
+        </trans-unit>
+        <trans-unit id="ucph_ce_tabs_add_item">
+            <source>Add tabs</source>
         </trans-unit>
         <trans-unit id="ucph_ce_tabs_item_default">
             <source>Default tab</source>

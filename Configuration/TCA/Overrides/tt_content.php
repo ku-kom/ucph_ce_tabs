@@ -70,6 +70,7 @@ call_user_func(function ($extKey ='ucph_ce_tabs', $contentType ='ucph_ce_tabs') 
                     'foreign_table' => 'tx_ucph_ce_tab_item',
                     'foreign_field' => 'tt_content',
                     'appearance' => [
+                        'newRecordLinkTitle' => 'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_add_item',
                         'useSortable' => true,
                         'showSynchronizationLink' => true,
                         'showAllLocalizationLink' => true,
