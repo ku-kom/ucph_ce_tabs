@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the package ucph_ce_tabs.
+ * This file is part of the package ucph_content_tabs.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  * University of Copenhagen.
@@ -8,7 +8,7 @@
 
 defined('TYPO3') or die('Access denied.');
 
-call_user_func(function ($extKey='ucph_ce_tabs') {
+call_user_func(function ($extKey='ucph_content_tabs') {
     /**
      * Default TypoScript
      */

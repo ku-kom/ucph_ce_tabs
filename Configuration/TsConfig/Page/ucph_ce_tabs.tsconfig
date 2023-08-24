@@ -1,13 +1,13 @@
 mod.wizards.newContentElement.wizardItems.interactive {
     elements {
-        ucph_ce_tabs {
+        ucph_content_tabs {
             iconIdentifier = ucph-ce-tabs-icon
-            title = LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_title
-            description = LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_desc
+            title = LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_title
+            description = LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_desc
             tt_content_defValues {
-                CType = ucph_ce_tabs
+                CType = ucph_content_tabs
             }
         }
     }
-    show := addToList(ucph_ce_tabs)
+    show := addToList(ucph_content_tabs)
 }

@@ -15,7 +15,7 @@ return [
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
-        'title' => 'LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item',
+        'title' => 'LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item',
         'delete' => 'deleted',
         'versioningWS' => true,
         'origUid' => 't3_origuid',
@@ -68,7 +68,7 @@ return [
         ],
         'visibility' => [
             'showitem' => '
-                hidden;LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item
+                hidden;LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item
             '
         ],
         // hidden but needs to be included all the time, so sys_language_uid is set correctly
@@ -80,12 +80,12 @@ return [
     'columns' => [
         'tt_content' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_tt_content',
+            'label' => 'LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item_tt_content',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tt_content',
-                'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.{#CType}=\'ucph_ce_tabs\'',
+                'foreign_table_where' => 'AND tt_content.pid=###CURRENT_PID### AND tt_content.{#CType}=\'ucph_content_tabs\'',
                 'maxitems' => 1,
                 'default' => 0,
             ],
@@ -147,8 +147,8 @@ return [
                         0
                     ]
                 ],
-                'foreign_table' => 'tx_ucph_ce_tab_item',
-                'foreign_table_where' => 'AND tx_ucph_ce_tab_item.pid=###CURRENT_PID### AND tx_ucph_ce_tab_item.sys_language_uid IN (-1,0)',
+                'foreign_table' => 'tx_ucph_content_tab_item',
+                'foreign_table_where' => 'AND tx_ucph_content_tab_item.pid=###CURRENT_PID### AND tx_ucph_content_tab_item.sys_language_uid IN (-1,0)',
                 'default' => 0
             ]
         ],
@@ -159,7 +159,7 @@ return [
         ],
         'header' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_header',
+            'label' => 'LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item_header',
             'config' => [
                 'type' => 'input',
                 'size' => 50,
@@ -167,7 +167,7 @@ return [
             ],
         ],
         'bodytext' => [
-            'label' => 'LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_bodytext',
+            'label' => 'LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item_bodytext',
             'l10n_mode' => 'prefixLangTitle',
             'l10n_cat' => 'text',
             'config' => [
@@ -180,7 +180,7 @@ return [
         ],
         'image' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_image',
+            'label' => 'LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item_image',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'image',
                 [
@@ -206,7 +206,7 @@ return [
                                 ]
                             ],
                             'alternative' => [
-                                'description' => 'LLL:EXT:ucph_ce_tabs/Resources/Private/Language/locallang_be.xlf:ucph_ce_tabs_item_image_alt'
+                                'description' => 'LLL:EXT:ucph_content_tabs/Resources/Private/Language/locallang_be.xlf:ucph_content_tabs_item_image_alt'
                             ]
                         ],
                         'types' => [

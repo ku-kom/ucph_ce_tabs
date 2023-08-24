@@ -1,19 +1,19 @@
-tt_content.ucph_ce_tabs >
+tt_content.ucph_content_tabs >
 # CTYPE: BOOTSTRAP TAB
-tt_content.ucph_ce_tabs =< lib.contentElement
-tt_content.ucph_ce_tabs {
+tt_content.ucph_content_tabs =< lib.contentElement
+tt_content.ucph_content_tabs {
     templateName = Tab
     templateRootPaths {
-        104 = EXT:ucph_ce_tabs/Resources/Private/Templates/
+        104 = EXT:ucph_content_tabs/Resources/Private/Templates/
     }
     partialRootPaths {
-        104 = EXT:ucph_ce_tabs/Resources/Private/Partials/
+        104 = EXT:ucph_content_tabs/Resources/Private/Partials/
     }
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         20 {
-            table = tx_ucph_ce_tab_item
+            table = tx_ucph_content_tab_item
             pidInList.field = pid
             where {
                 data = field:uid
